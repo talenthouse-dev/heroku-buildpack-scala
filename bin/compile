@@ -52,7 +52,7 @@ SBT_BINDIR="$SBT_USER_HOME"/bin
 cd $BUILD_DIR
 
 # unpack cache
-CACHED_DIRS="$SBT_USER_HOME/.ivy2 $SBT_BINDIR target project/target project/boot"
+CACHED_DIRS="$SBT_USER_HOME/.ivy2 $SBT_BINDIR"
 for DIR in $CACHED_DIRS; do
   cache_copy $DIR $CACHE_DIR $BUILD_DIR
 done
@@ -145,9 +145,7 @@ if is_play $BUILD_DIR ; then
   fi
   if [ -d $BUILD_DIR/target ] ; then
     echo "-----> Dropping compilation artifacts from the slug"
-    rm -rf $BUILD_DIR/target/scala-*
-    rm -rf $BUILD_DIR/target/streams
-    rm -rf $BUILD_DIR/target/resolution-cache
+    rm -rf $BUILD_DIR/target
   fi
 fi
 
