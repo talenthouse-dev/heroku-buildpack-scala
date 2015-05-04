@@ -142,12 +142,15 @@ if is_play $BUILD_DIR ; then
     rm -rf $BUILD_DIR/target/streams
     rm -rf $BUILD_DIR/target/resolution-cache
   fi
-  if [ -d $BUILD_DIR/modules/platform ] ; then
+  if [ -d $BUILD_DIR/modules/platform/target ] ; then
     echo "-----> Dropping extra directories from the slug"
     rm -rf $BUILD_DIR/modules/admin/target
-    rm -rf $BUILD_DIR/modules/admin/target
-    rm -rf $BUILD_DIR/modules/admin/target
-    rm -rf $BUILD_DIR/modules/admin/target
+    rm -rf $BUILD_DIR/modules/contentcenter/target
+    rm -rf $BUILD_DIR/modules/core/target
+    rm -rf $BUILD_DIR/modules/email/target
+    rm -rf $BUILD_DIR/modules/platform/target
+    rm -rf $BUILD_DIR/modules/search/target
+    rm -rf $BUILD_DIR/modules/studio/target
   fi
 fi
 
