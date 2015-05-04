@@ -142,7 +142,7 @@ if is_play $BUILD_DIR ; then
     rm -rf $BUILD_DIR/target/streams
     rm -rf $BUILD_DIR/target/resolution-cache
   fi
-  if [ -d $BUILD_DIR/modules/doesnotexist ] ; then
+  if [ -d $BUILD_DIR/modules/platform/target ] ; then
     echo "-----> Dropping extra directories from the slug"
     rm -rf $BUILD_DIR/modules/admin/target/universal
     rm -rf $BUILD_DIR/modules/admin/target/scala-*
