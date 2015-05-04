@@ -144,30 +144,37 @@ if is_play $BUILD_DIR ; then
   fi
   if [ -d $BUILD_DIR/modules/platform/target ] ; then
     echo "-----> Dropping extra directories from the slug"
+    rm -rf $BUILD_DIR/modules/admin/target/universal
     rm -rf $BUILD_DIR/modules/admin/target/scala-*
     rm -rf $BUILD_DIR/modules/admin/target/streams
     rm -rf $BUILD_DIR/modules/admin/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/contentcenter/target/universal
     rm -rf $BUILD_DIR/modules/contentcenter/target/scala-*
     rm -rf $BUILD_DIR/modules/contentcenter/target/streams
     rm -rf $BUILD_DIR/modules/contentcenter/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/core/target/universal
     rm -rf $BUILD_DIR/modules/core/target/scala-*
     rm -rf $BUILD_DIR/modules/core/target/streams
     rm -rf $BUILD_DIR/modules/core/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/email/target/universal
     rm -rf $BUILD_DIR/modules/email/target/scala-*
     rm -rf $BUILD_DIR/modules/email/target/streams
     rm -rf $BUILD_DIR/modules/email/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/platform/target/universal
     rm -rf $BUILD_DIR/modules/platform/target/scala-*
     rm -rf $BUILD_DIR/modules/platform/target/streams
     rm -rf $BUILD_DIR/modules/platform/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/search/target/universal
     rm -rf $BUILD_DIR/modules/search/target/scala-*
     rm -rf $BUILD_DIR/modules/search/target/streams
     rm -rf $BUILD_DIR/modules/search/target/resolution-cache
     
+    rm -rf $BUILD_DIR/modules/studio/target/universal
     rm -rf $BUILD_DIR/modules/studio/target/scala-*
     rm -rf $BUILD_DIR/modules/studio/target/streams
     rm -rf $BUILD_DIR/modules/studio/target/resolution-cache
